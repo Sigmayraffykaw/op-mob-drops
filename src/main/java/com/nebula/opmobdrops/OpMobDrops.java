@@ -23,7 +23,7 @@ public class OpMobDrops implements ModInitializer {
         });
     }
     private static ItemStack randomReward() {
-        return switch (ThreadLocalRandom.current().nextInt(22)) {
+        return switch (ThreadLocalRandom.current().nextInt(23)) {
             case 0 -> new ItemStack(Items.NETHERITE_SWORD);
             case 1 -> new ItemStack(Items.NETHERITE_PICKAXE);
             case 2 -> new ItemStack(Items.NETHERITE_CHESTPLATE);
@@ -45,6 +45,7 @@ public class OpMobDrops implements ModInitializer {
             case 18 -> new ItemStack(Items.HEAVY_CORE, 2);
             case 19 -> new ItemStack(Items.ANCIENT_DEBRIS, 32);
             case 20 -> new ItemStack(Items.END_CRYSTAL, 16);
+            case 21 -> new ItemStack(Items.GOLDEN_APPLE, 16);
             default -> new ItemStack(Items.DIAMOND, 64);
         };
     }
