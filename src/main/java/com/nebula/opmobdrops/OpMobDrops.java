@@ -90,7 +90,7 @@ public class OpMobDrops implements ModInitializer {
             case 22 -> Items.ANCIENT_DEBRIS;
             case 23 -> Items.SHULKER_BOX;
             case 24 -> Items.END_CRYSTAL;
-            default -> Items.DIAMOND;
+            default -> Items.NETHERITE_INGOT;
         };
     }
 
