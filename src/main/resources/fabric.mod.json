@@ -1,0 +1,11 @@
+{
+ "schemaVersion":1,
+ "id":"opmobdrops",
+ "version":"${version}",
+ "name":"OP Mob Drops",
+ "description":"Player-killed mobs, including passive animals, can drop powerful random loot.",
+ "authors":["Nebula"],
+ "environment":"*",
+ "entrypoints":{"main":["com.nebula.opmobdrops.OpMobDrops"]},
+ "depends":{"fabricloader":">=0.18.0","minecraft":"1.21.11","java":">=21","fabric-api":"*"}
+}
