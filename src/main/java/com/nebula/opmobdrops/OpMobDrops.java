@@ -23,7 +23,7 @@ public class OpMobDrops implements ModInitializer {
         });
     }
     private static ItemStack randomReward() {
-        return switch (ThreadLocalRandom.current().nextInt(30)) {
+        return switch (ThreadLocalRandom.current().nextInt(22)) {
             case 0 -> new ItemStack(Items.NETHERITE_SWORD);
             case 1 -> new ItemStack(Items.NETHERITE_PICKAXE);
             case 2 -> new ItemStack(Items.NETHERITE_CHESTPLATE);
@@ -31,29 +31,21 @@ public class OpMobDrops implements ModInitializer {
             case 4 -> new ItemStack(Items.NETHERITE_LEGGINGS);
             case 5 -> new ItemStack(Items.NETHERITE_BOOTS);
             case 6 -> new ItemStack(Items.ELYTRA);
-            case 7 -> new ItemStack(Items.ENCHANTED_GOLDEN_APPLE, 4);
-            case 8 -> new ItemStack(Items.DIAMOND, 32);
-            case 9 -> new ItemStack(Items.EMERALD, 64);
-            case 10 -> new ItemStack(Items.NETHERITE_INGOT, 4);
-            case 11 -> new ItemStack(Items.TOTEM_OF_UNDYING, 3);
-            case 12 -> new ItemStack(Items.TRIDENT);
-            case 13 -> new ItemStack(Items.MACE);
-            case 14 -> new ItemStack(Items.NETHERITE_AXE);
-            case 15 -> new ItemStack(Items.NETHERITE_SHOVEL);
-            case 16 -> new ItemStack(Items.NETHERITE_HOE);
-            case 17 -> new ItemStack(Items.NETHERITE_BLOCK, 2);
-            case 18 -> new ItemStack(Items.DIAMOND_BLOCK, 8);
-            case 19 -> new ItemStack(Items.EMERALD_BLOCK, 8);
-            case 20 -> new ItemStack(Items.NETHER_STAR);
-            case 21 -> new ItemStack(Items.BEACON);
-            case 22 -> new ItemStack(Items.SHULKER_BOX, 2);
-            case 23 -> new ItemStack(Items.END_CRYSTAL, 8);
-            case 24 -> new ItemStack(Items.GOLDEN_APPLE, 16);
-            case 25 -> new ItemStack(Items.EXPERIENCE_BOTTLE, 64);
-            case 26 -> new ItemStack(Items.HEAVY_CORE);
-            case 27 -> new ItemStack(Items.BREEZE_ROD, 16);
-            case 28 -> new ItemStack(Items.DRAGON_BREATH, 16);
-            default -> new ItemStack(Items.ANCIENT_DEBRIS, 16);
+            case 7 -> new ItemStack(Items.ENCHANTED_GOLDEN_APPLE, 8);
+            case 8 -> new ItemStack(Items.DIAMOND_BLOCK, 16);
+            case 9 -> new ItemStack(Items.NETHERITE_INGOT, 8);
+            case 10 -> new ItemStack(Items.TOTEM_OF_UNDYING, 5);
+            case 11 -> new ItemStack(Items.TRIDENT);
+            case 12 -> new ItemStack(Items.MACE);
+            case 13 -> new ItemStack(Items.NETHERITE_AXE);
+            case 14 -> new ItemStack(Items.NETHERITE_BLOCK, 4);
+            case 15 -> new ItemStack(Items.NETHER_STAR, 2);
+            case 16 -> new ItemStack(Items.BEACON, 2);
+            case 17 -> new ItemStack(Items.SHULKER_BOX, 4);
+            case 18 -> new ItemStack(Items.HEAVY_CORE, 2);
+            case 19 -> new ItemStack(Items.ANCIENT_DEBRIS, 32);
+            case 20 -> new ItemStack(Items.END_CRYSTAL, 16);
+            default -> new ItemStack(Items.DIAMOND, 64);
         };
     }
 }
