@@ -2,7 +2,7 @@ plugins {
  id 'fabric-loom' version '1.14-SNAPSHOT'
  id 'maven-publish'
 }
-version = '1.0.0'
+version = '1.1.0'
 group = 'com.nebula'
 base { archivesName = 'op-mob-drops' }
 repositories { mavenCentral() }
