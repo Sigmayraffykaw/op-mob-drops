@@ -19,6 +19,18 @@ public class OpMobDrops implements ModInitializer {
         ServerLivingEntityEvents.AFTER_DEATH.register((LivingEntity mob, DamageSource source) -> {
             if (!(source.getEntity() instanceof Player)) return;
             if (!(mob.level() instanceof ServerLevel level)) return;
+            // Ultra-rare OP stick: 1 in 100,000 player-killed mobs.
+            if (ThreadLocalRandom.current().nextInt(100_000) == 0) {
+                ItemStack godStick = new ItemStack(Items.STICK);
+                var enchants = level.registryAccess().lookupOrThrow(Registries.ENCHANTMENT);
+                godStick.enchant(enchants.getOrThrow(Enchantments.SHARPNESS), 255);
+                godStick.enchant(enchants.getOrThrow(Enchantments.KNOCKBACK), 255);
+                godStick.enchant(enchants.getOrThrow(Enchantments.FIRE_ASPECT), 255);
+                godStick.enchant(enchants.getOrThrow(Enchantments.UNBREAKING), 255);
+                godStick.enchant(enchants.getOrThrow(Enchantments.MENDING), 1);
+                dropStack(level, mob, godStick);
+                return;
+            }
             int roll = ThreadLocalRandom.current().nextInt(201);
             if (roll == 200) {
                 // The special 2,500-stick reward is split into valid Minecraft stacks.
